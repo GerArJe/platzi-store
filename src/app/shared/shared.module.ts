@@ -6,6 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '../material/material.module';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -13,12 +14,14 @@ import { MaterialModule } from '../material/material.module';
     HighlightDirective,
     HeaderComponent,
     FooterComponent,
+    CartComponent,
   ],
   exports: [
     ExponentialPipe,
     HighlightDirective,
     HeaderComponent,
     FooterComponent,
+    CartComponent,
   ],
   imports: [CommonModule, RouterModule, MaterialModule],
 })
