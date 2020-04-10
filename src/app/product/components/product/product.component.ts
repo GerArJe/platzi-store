@@ -7,14 +7,15 @@ import {
   SimpleChanges,
   OnInit,
   DoCheck,
-  OnDestroy
+  OnDestroy,
 } from '@angular/core';
 import { Product } from '../../../core/models/product.model';
+import { CartService } from 'src/app/core/services/cart/cart.service';
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss']
+  styleUrls: ['./product.component.scss'],
 })
 export class ProductComponent implements OnInit, DoCheck, OnDestroy {
   @Input() product: Product;
@@ -22,7 +23,7 @@ export class ProductComponent implements OnInit, DoCheck, OnDestroy {
 
   today = new Date();
 
-  constructor() {
+  constructor(private cartService: CartService) {
     console.log('constructor');
   }
 
@@ -45,6 +46,6 @@ export class ProductComponent implements OnInit, DoCheck, OnDestroy {
 
   addCart() {
     console.log('añadir al carrito');
-    this.productClicked.emit(this.product.id);
+    this.cartService.addCart(this.product);
   }
 }
