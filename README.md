@@ -1,4 +1,15 @@
 # PlatziStore
+This Web project is a Shop Online. Where you can add your products to the cart and the admin can manage the products
+
+These are the pages that it has:
+
+* Home with some slides
+* Products where you can find a list of products for add to cart
+* Contact
+* Order where you can administrate your oder and the shop process
+* Auth for register o login
+* page-not-found in case the url not match
+* Admin to manage products
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
 
